@@ -1,15 +1,9 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "airbnb",
-    "eslint:recommended",
-    "plugin:flowtype/recommended",
-    "prettier"
-  ],
+  "extends": ["airbnb", "eslint:recommended", "prettier"],
   "globals": {
     "window": "writable"
   },
-  "plugins": ["flowtype"],
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
