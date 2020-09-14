@@ -1,13 +1,5 @@
-import PageView from 'containers/PageView'
+import PageView from 'components/PageView'
 
-const Index = () => (
-  <PageView
-    title="首頁"
-    navList={[
-      { name: '其他', url: '/other' },
-      { name: '不知道怎麼命名', url: 'unknown' },
-    ]}
-  />
-)
+const Index = () => <PageView title="首頁" />
 
 export default Index
