@@ -1,13 +1,19 @@
 export const actionTypes = {
-  initialize: 'App/initialize',
-  setUserName: 'App/setUserName',
+  loadRepositories: 'App/loadRepositories',
+  loadRepositoriesSuccess: 'App/loadRepositoriesSuccess',
+  loadNextPageRepositories: 'App/loadNextPageRepositories',
 }
 
-export const initialize = () => ({
-  type: actionTypes.initialize,
+export const loadRepositories = (payload) => ({
+  type: actionTypes.loadRepositories,
+  payload,
 })
 
-export const setUserName = payload => ({
-  type: actionTypes.setUserName,
+export const loadRepositoriesSuccess = (payload) => ({
+  type: actionTypes.loadRepositoriesSuccess,
   payload,
+})
+
+export const loadNextPageRepositories = () => ({
+  type: actionTypes.loadNextPageRepositories,
 })

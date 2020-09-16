@@ -4,8 +4,6 @@ const Next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 
 const config = require('./config')
-const responseStatus = require('../constants/responseStatus')
-const responseFormatter = require('../utils/responseFormatter')
 
 express.use(require('body-parser').urlencoded({ extended: true }))
 

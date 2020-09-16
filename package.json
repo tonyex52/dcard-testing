@@ -1,11 +1,12 @@
 {
-  "name": "with-redux-saga",
+  "name": "dcard-testing",
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "dev": "node ./server",
+    "start": "node ./server",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node ./server"
+    "production:start": "cross-env NODE_ENV=production node ./server",
+    "production": "next build && yarn production:start"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -14,6 +15,7 @@
     "cross-env": "^7.0.2",
     "es6-promise": "4.1.1",
     "express": "^4.17.1",
+    "lodash": "^4.17.20",
     "next": "9.4.1",
     "next-redux-saga": "4.0.0",
     "next-redux-wrapper": "^6.0.2",
