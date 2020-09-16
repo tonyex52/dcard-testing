@@ -8,6 +8,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 60px auto;
+  overflow: hidden;
 `
 
 const StyledHeader = styled(Header)`
@@ -19,24 +20,25 @@ const StyledHeader = styled(Header)`
 const Content = styled.div`
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
+  overflow: hidden;
 `
 
-const PageView = ({ className, title, Children }) => (
+const PageView = ({ className, title, children }) => (
   <Container className={className}>
     <StyledHeader title={title} />
-    {Children && <Content>{Children}</Content>}
+    {children && <Content>{children}</Content>}
   </Container>
 )
 
 PageView.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
-  Children: PropTypes.node,
+  children: PropTypes.node,
 }
 
 PageView.defaultProps = {
   className: '',
-  Children: null,
+  children: null,
 }
 
 export default PageView
