@@ -1,15 +1,9 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "airbnb",
-    "eslint:recommended",
-    "plugin:flowtype/recommended",
-    "prettier"
-  ],
+  "extends": ["airbnb", "eslint:recommended", "prettier"],
   "globals": {
     "window": "writable"
   },
-  "plugins": ["flowtype"],
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
@@ -24,6 +18,8 @@
     "import/no-unresolved": 0,
     "import/newline-after-import": 0,
     "import/no-extraneous-dependencies": 0,
-    "react/require-default-props": 0
+    "import/prefer-default-export": 0,
+    "react/require-default-props": 0,
+    "react/forbid-prop-types": 0
   }
 }
