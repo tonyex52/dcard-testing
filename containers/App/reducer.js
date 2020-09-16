@@ -1,16 +1,26 @@
-import { actionTypes } from './actions';
+import { actionTypes } from './actions'
 
 const initialState = {
-  userId: '',
-  displayName: '',
+  isLoaded: false,
+  repositories: [],
+  total: 0,
 }
 
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.setUserName:
+    case actionTypes.loadRepositories:
+      return initialState
+    case actionTypes.loadRepositoriesSuccess:
       return {
         ...state,
-        displayName: payload,
+        isLoaded: true,
+        repositories: state.repositories.concat(payload.items),
+        total: payload.total_count,
+      }
+    case actionTypes.loadNextPageRepositories:
+      return {
+        ...state,
+        isLoaded: false,
       }
     default:
       return state
